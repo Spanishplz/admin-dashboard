@@ -8,19 +8,55 @@ body {
     background-color: grey;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 6fr;
 }
 
 .sidebar {
     background-color: skyblue;
     grid-column: 1/2;
-    grid-row: 1/ 3;
+    grid-row: 1/3;
 }
 
 .header {
+    background-color: lime;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 2fr;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 4fr 1.5fr;
+}
+
+
+.projects-cards {
+    display: grid;
+    grid-template-column: 1fr 1fr;
+    grid-template-rows: 50px 1fr 1fr;
+}
+
+.projects-cards > p {
+    grid-column: 1 / 3;
+}
+
+.card {
+    width: 95%;
+    height: 200px;
+    border: 1px solid orange;
+}
+
+.announcements-block {
+    display: grid;
+    grid-template-rows: 50px repeat(3, 1fr);
+}
+
+.announcements-block > p{
     grid-row: 1/2;
 }
 
-.main {
-    
+.trending-block {
+    grid-column: 2;
+    grid-row: 2;
 }
