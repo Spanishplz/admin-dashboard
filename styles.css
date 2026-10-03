@@ -14,9 +14,11 @@ h1, h2, h3, p {
 }
 
 body {
+    height: 100vh;
     background-color: grey;
     display: grid;
     grid-template-columns: 1fr 4fr;
+    grid-template-rows: max-content 1fr;
 }
 
 
@@ -28,7 +30,7 @@ body {
     display: grid;
     align-content: start;
     gap: 30px;
-
+    
     font-size: 1.3rem;
     font-weight: bold;
     color: white;
@@ -185,6 +187,9 @@ body {
 
 
 main {
+    background-color: gold;
+    grid-column: 2/3;
+    grid-row: 2/3;
     display: grid;
     grid-template-columns: 4fr 1.5fr;
 }
