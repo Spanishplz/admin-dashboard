@@ -17,38 +17,74 @@ body {
     height: 100vh;
     background-color: grey;
     display: grid;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 6fr;
     grid-template-rows: max-content 1fr;
 }
 
 
 
 .sidebar {
-    background-color: skyblue;
+    background-color: darkcyan;
     grid-column: 1/2;
     grid-row: 1/3;
     display: grid;
     align-content: start;
-    gap: 30px;
+
     
     font-size: 1.3rem;
     font-weight: bold;
     color: white;
+
+    gap: 20px;
+    padding: 20px;
+    justify-content: start;
 }
 
 
 .branding-block {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: column;
     align-items: center;
-    justify-items: center;
+    justify-content: start;
+    gap: 10px;
+
+    & * {
+        /* border: 1px solid black; */
+    }
+    & img  {
+        width: 75px;
+    }
 }
 
-/* .branding-block svg { */
-/*     width: 50px; */
-/*     color: green; */
-/* } */
+.navigation-block {
 
+    & * {
+        /* border: 1px solid  black; */
+    }
+}
+
+.information-block {
+    & * {
+        /* border: 1px solid  black; */
+    }
+}
+
+.list {
+    padding: 0;
+    display: grid;
+    justify-content: start;
+    row-gap: 10px;
+    /* align-content: center; */
+ 
+    & > li {
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: start;
+        align-items: end;
+        gap: 15px;
+    }
+    
+}
 
 .white {
     filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
@@ -174,7 +210,7 @@ body {
         border-radius: 20px;
         font-weight: bold;
         color: white;
-        background: blue;
+        background: darkcyan;
         border: none;
 
     }
@@ -237,6 +273,10 @@ main {
         margin: 0;
         background-color: orange;
         justify-self: end;
+        display: grid;
+        gap: 20px;
+        grid-auto-flow: column;
+        /* grid-template-columns: 1fr 1fr 1fr; */
     }
 }
 
