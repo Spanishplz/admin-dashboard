@@ -3,22 +3,33 @@
     /* border: 1px solid red */
 }
 
-:root {
-    --profile-small: 40px;
-    --profile-big: 60px;
-}
-
 h1, h2, h3, p {
     margin: 0;
     padding: 0;
 }
 
+:root {
+    --profile-small: 40px;
+    --profile-big: 60px;
+
+    --white: white;
+    --dark-grey: #696969;
+    --soft-grey: #e2e8f0;
+}
+
+
+.user-bold {
+    font-weight: bold;
+}
+
+
 body {
     height: 100vh;
-    background-color: grey;
+    background-color: var(--soft-grey);
     display: grid;
     grid-template-columns: 1fr 6fr;
     grid-template-rows: max-content 1fr;
+    /* color: var(--dark-grey); */
 }
 
 
@@ -30,10 +41,10 @@ body {
     display: grid;
     align-content: start;
 
-    
+
     font-size: 1.3rem;
     font-weight: bold;
-    color: white;
+    color: var(--white);
 
     gap: 20px;
     padding: 20px;
@@ -116,16 +127,18 @@ body {
 }
 
 .header {
-    background-color: lime;
+    background-color: var(--white);
     grid-column: 2/3;
     grid-row: 1/2;
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 50px 1fr;
+    row-gap: 30px;
     padding: 0 50px 0;
 }
 
 .top-header {
+    padding-top: 20px;
     grid-column: 1/3;
     grid-row: 1/2;
 }
@@ -133,6 +146,7 @@ body {
 .bottom-header {
     grid-column: 1/3;
     grid-row: 2/3;
+    padding-bottom: 20px;
 }
 
 .top-header,
@@ -206,10 +220,10 @@ body {
 
 
     & button {
-        padding: 8px 20px;;
+        padding: 10px 25px;;
         border-radius: 20px;
         font-weight: bold;
-        color: white;
+        color: var(--white);
         background: darkcyan;
         border: none;
 
@@ -223,24 +237,34 @@ body {
 
 
 main {
-    background-color: gold;
+    background-color: var(--light-grey);
     grid-column: 2/3;
     grid-row: 2/3;
     display: grid;
     grid-template-columns: 4fr 1fr;
 }
 
+.project-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
 
+.title {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
 .projects-cards {
     grid-row: 1/3;
     display: grid;
     padding: 30px;
     align-self: start;
 
-    & > p {
-        background-color: white;
+    & > p::first-child {
+        background-color: var(--soft-grey);
         align-self: end;
     }
+
 }
 
 .projects-cards > p {
@@ -249,7 +273,7 @@ main {
 
 .cards-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     grid-auto-rows: 200px;
     gap: 25px;
 
@@ -258,41 +282,37 @@ main {
     /* width: 340px;               /\*might delete*\/ */
     border-radius: 10px;
     padding: 20px 30px;
-    background-color: lightgrey;
+    background-color: var(--white);
     /* border: 1px solid orange; */
     border-left: 10px solid orange;
     /* box-shadow: inset px 0px orange; */
     display: grid;
     grid-template-rows: 30px 1fr 30px;
-    justify-items: start;
-
+    gap: 15px;
     & p {
         overflow: auto;
-        /* overflow: hidden; */
-        /* white-space: nowrap; */
-        /* text-overflow: ellipsis; */
+        
+    }
+
+    & > p {
+        color: var(--dark-grey);
     }
 
     & div {
         padding: 0;
         margin: 0;
-        background-color: orange;
+        /* background-color: orange; */
         justify-self: end;
         display: grid;
         gap: 20px;
         grid-auto-flow: column;
-        /* grid-template-columns: 1fr 1fr 1fr; */
+        
     }
 }
 
-.title {
-    font-size: 1.3rem;
-    font-weight: 600;
-    padding-bottom: 10px;
-}
 
 .right-side-block {
-    padding: 30px 20px;
+    padding: 30px 30px 20px 0px;
     display: grid;
     /* grid-template-rows:; */
     gap: 30px;
@@ -304,7 +324,7 @@ main {
 }
 
 .announcements-wrapper{
-    background-color: white;
+    background-color: var(--white);
     border-radius: 10px;
     display: grid;
     padding: 0px 20px 0px;
@@ -324,11 +344,12 @@ main {
     & p {
         height: 60px;;
         overflow: auto;
+        color: var(--dark-grey);
     }
 }
 
 .small-title {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: bold;
 }
 
@@ -337,7 +358,7 @@ main {
     display: grid;
 }
 .trending-users-wrapper {
-    background-color: white;
+    background-color: var(--white);
     border-radius: 10px;
     display: grid;
     padding: 20px 20px;;
@@ -345,11 +366,11 @@ main {
 }
 
 .trending-user {
-    background-color: white;
+    background-color: var(--white);
     display: grid;
     grid-template-column: 1fr 3fr;
     justify-content: start;
-    gap: 10px;
+    column-gap: 20px;
 
     & * {
         /* border: 1px solid black; */
@@ -357,13 +378,19 @@ main {
     & > div {
         grid-row: 1/3;
     }
-
+    
     & .user-hashtag {
         font-weight: 600;
     }
 
     & .trending-info {
-        color: grey;
+        color: var(--dark-grey);
     }
-    
+}
+
+.user-wrapper {
+    display: grid;
+    gap: 3px;
+
+
 }
