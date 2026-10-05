@@ -100,6 +100,10 @@ body {
         justify-content: start;
         align-items: end;
         gap: 15px;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
 }
@@ -170,6 +174,11 @@ body {
     box-shadow: 5px 5px 8px 3px var(--border-grey);
     letter-spacing: 0.1rem;
     font-family: "Quicksand", "MS Sans", monospace, systems-ui;
+
+    & img:hover {
+        cursor: pointer;
+    }
+
 }
 
 .top-header {
@@ -204,6 +213,10 @@ body {
         background-color: var(--soft-grey);
         border-radius: 20px;
         border: none;
+    }
+
+    & img:hover {
+        cursor: pointer;
     }
 }
 
@@ -272,6 +285,10 @@ body {
         border: none;
         letter-spacing: 0.03rem;
         font-family: "Michroma";
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
 
@@ -347,11 +364,14 @@ main {
     & div {
         padding: 0;
         margin: 0;
-        /* background-color: orange; */
         justify-self: end;
         display: grid;
         gap: 20px;
         grid-auto-flow: column;
+
+        & img:hover {
+            cursor: pointer;
+        }
     }
 }
 
