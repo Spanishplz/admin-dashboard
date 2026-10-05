@@ -15,7 +15,7 @@ Project done under the The Odin Project's curriculum guidance.
 - Man in front of window by Taylor, on Unsplash.
 
 ## Icons and Logo
-- All of them were downloaded form Pictogrammers.com and belong to Material Design Icons.
+- All of them were downloaded from Pictogrammers.com and belong to Material Design Icons.
 
 ## Fonts
 - "Michroma" by Vernon Adams, at Google Fonts.
